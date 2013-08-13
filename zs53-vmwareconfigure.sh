@@ -1,13 +1,13 @@
 #!/bin/bash -e
 # Author: Nick Maiorsky nick@zend.com
 # Import global conf 
-. $global_conf
+. global_conf
 
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 set -e
 
-PROGNAME=`basename $0`
-ADD_SERVER_OPTIONS="--retry 150 --wait 5 "
+#PROGNAME=`basename $0`
+#ADD_SERVER_OPTIONS="--retry 150 --wait 5 "
 
 ## Function to display errors and exit ##
 function check_error()
