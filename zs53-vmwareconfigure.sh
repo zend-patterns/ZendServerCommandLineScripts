@@ -24,17 +24,17 @@ function error_exit()
    exit 1
 }
 
-## Configure Zend Server tools ##
+## Configure Zend Server tools shortcuts ##
 zsroot=/usr/local/zend
 zsmanage=$zsroot/bin/zs-manage
 
-## Join Zend Cluster configured as cluster node ##
+## Bootstap and Join Zend Cluster if configured as cluster node ## 
 
 if [ "$zendnode_is_node" = "1" ] ; then 
-        $zsmanage bootstrap-single-server -p "$zendnode_ui_pass" -o "$zend_order_number" -l "$zend_license_key" -r TRUE -a TRUE -e "$zend_admin_email" -d "dpassword" || true
-        $zsroot/bin/zendctl.sh restart
-        web_api_key=`sqlite3 /usr/local/zend/var/db/gui.db "select HASH from GUI_WEBAPI_KEYS where NAME='admin';"`
-        $zsmanage server-add-to-cluster -n "$zend_self_name" -i "$zend_self_addr" -o "$zend_db_host" -u "$zend_db_user" -p "$zend_db_password" -d "ZendServer" -K $web_api_key -N "admin"
+          bootstrap-single-server -p "$zendnode_ui_pass" -o "$zend_order_number" -l "$zend_license_key" -r TRUE -a TRUE -e "$zend_admin_email" -d "dpassword" || true
+         $zsroot/bin/zendctl.sh restart
+#        web_api_key=`sqlite3 /usr/local/zend/var/db/gui.db "select HASH from GUI_WEBAPI_KEYS where NAME='admin';"`
+         $zsmanage server-add-to-cluster -n "$zend_self_name" -i "$zend_self_addr" -o "$zend_db_host" -u "$zend_db_user" -p "$zend_db_password" -d "ZendServer" -K $web_api_key -N "admin"
 else
          $zsmanage bootstrap-single-server -p "$zendnode_ui_pass" -o "$zend_order_number" -l "$zend_license_key" -r "TRUE" -a "TRUE" -e "$zend_admin_email" -d dpassword || true
          $zsroot/bin/zendctl.sh restart
