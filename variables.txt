@@ -1,101 +1,35 @@
-zend_admin_email
- 
-String
- 
-None
-  
-zend_db_password
- 
-String
- 
-None
- 
-zend_db_user
- 
-String
- 
-None
-  
-zend_db_port
- 
-String
- 
-None
- 
-global_conf
- 
-Content
-https://${darwin.server.ip}:8443/darwin/conf/darwin_global.conf
-None
+# Zend Web Administartion password for user Admin
+zendadmin_ui_pass='zulutango99'
 
-zendnode_ui_pass
-Zend Server Node UI Password
-String
- 
-None
- 
-zendnode_is_node
-Set to 0 if used as single server. If set to 1 ZSCM registration will be performed.
-String
- 
-None
- 
-zend_self_addr
- 
-String
- 
-None
- 
- 
-zend_self_name
-Zend node name
-String
- 
-None
- 
- 
-zend_db_host
-Zend Cluster Manager DB Address
-String
- 
-None
+# Zend Web Administartion password for user Developer
+zenddev_ui_pass='zalgreb00'
 
------- 
-zend_license_key
-http://www.zend.com/products/server/license
-String
- 
-None
- 
- 
-zend_order_number
-ZS Order number, comes as part of regular or trial license
-String
- 
-None
-----------------------------
+# Zend Server Purchise order number.
+zend_order_number='Zulu-IL999'
 
----------------------------- 
-zend_api_key_name
-Name of the WebAPI key used in internal comunication between nodes.
-String
- 
-None
- 
- 
-zend_api_key
-Temprorary API key
-String
- 
-None
- 
-------------------------------- 
- 
- 
-DOWNLOADRPMURL
-Zend Server respository configuration script
-String
-https://s3.amazonaws.com/nickscripts/ZendServer-6.0-RepoInstaller.tar.gz
-None
- 
- 
+# Zend Server License Key.
+zend_license_key=''
+
+# Zend Monitoring email.
+zend_admin_email='nick@zend.com'
+
+# Node hostname or nick name if specified.
+zend_self_name=`hostname`
+
+# Node IP address eth0
+zend_self_addr=`ip a s dev eth0 | grep -oP 'inet\s+\K[^/]+'`
+
+# Zend Cluster MySQL DB hostname or address.
+zend_db_host=''
+
+# Zend Cluster MySQL DB user name with admin priveleges. 
+zend_db_user='root'
+
+# Zend Cluster MySQL DB password.
+zend_db_password='support'
+
+# Zend Cluster Database name.
+zend_db_name='testdb001'
+
+# PHP version branch used by on the server. Same version of PHP on all the nodes is required.
+zend_php_ver='5.4'
