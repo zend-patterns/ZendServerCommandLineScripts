@@ -4,10 +4,10 @@ zendadmin_ui_pass=''
 # Zend Web Administartion password for user Developer
 zenddev_ui_pass=''
 
-# Zend Server Purchise order number.
+# Zend Server Purchise order number. If you are not specifying order number for evalation keep license key empty as well. 
 zend_order_number=''
 
-# Zend Server License Key.
+# Zend Server License Key. If not specified trial license key will be generated.
 zend_license_key=''
 
 # Zend Monitoring email.
