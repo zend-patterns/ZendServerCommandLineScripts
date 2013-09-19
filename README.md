@@ -2,9 +2,9 @@ Zend Server Bash intergration examples using Zend Web Api and Zend Server Cli to
 ===============
 ***
 Bash scripts for automatic provisioning and of Zend Server.
-===================================================================
+==========================================================
 Introduction
-============================
+============
 
 Zend Server comes with set of APIs and tools that enable fully automation of deployment and configuration. Entire clusters of Zend Server PHP Application servers can be created by running only few simple commands. Scripts and examples listed should serve as easy to read orientation or base for complex cloud or other automation. 
 
