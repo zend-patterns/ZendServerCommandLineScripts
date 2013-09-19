@@ -22,7 +22,7 @@ zend_db_user='root'
 zend_db_password='support'
 # Zend Cluster Database name.
 zend_db_name='testdb001'
-# PHP version branch used by on the server. Same version of PHP on all the nodes is required.
+# PHP version branch used by on the server. Same version of PHP on all the nodes is required. Use 5.3 or 5.4. 
 zend_php_ver='5.4'
 
 
