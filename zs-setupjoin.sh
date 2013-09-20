@@ -19,6 +19,7 @@ tar xvzf ZendServer-6.1.0-RepositoryInstaller-linux.tar.gz
 ZendServer-RepositoryInstaller-linux/install_zs.sh "$zend_php_ver" --automatic
 
 ## Cleanup
+cd /tmp
 rm -rf *
 
 ## Bootstrap and Creat or Join cluster. Command line tool used "zs-manage"
