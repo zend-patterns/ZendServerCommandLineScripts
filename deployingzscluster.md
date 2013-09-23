@@ -25,11 +25,16 @@ Zend Server user interface is driven by MySQL database and separate instance of 
 	
 	`
     mysql> CREATE USER 'zend_db_user'@'localhost' IDENTIFIED BY 'zend_db_pass';
-	mysql> GRANT ALL PRIVILEGES ON zend_db_name.* TO 'zend_db_user'@'localhost'
+    `
+	
+	`mysql> GRANT ALL PRIVILEGES ON zend_db_name.* TO 'zend_db_user'@'localhost'
     WITH GRANT OPTION;`
 	
 	`
 	mysql> CREATE USER 'zend_db_user'@'%' IDENTIFIED BY 'zend_db_pass';
+	`
+	
+	`
 	mysql> GRANT ALL PRIVILEGES ON zend_db_name.* TO 'zend_db_user'@'%'
     WITH GRANT OPTION;
 	`
