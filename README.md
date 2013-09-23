@@ -1,6 +1,4 @@
 ## Zend Server Bash intergration examples using Web Api and Cli tools.
-***
-
 ==================
 ## Introduction
 ============
