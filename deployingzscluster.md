@@ -30,8 +30,7 @@ Zend Server user interface is driven by MySQL database and separate instance of 
 	
 		mysql> CREATE USER 'zend_db_user'@'%' IDENTIFIED BY 'zend_db_pass';
 	
-		mysql> GRANT ALL PRIVILEGES ON zend_db_name.* TO 'zend_db_user'@'%'
-    WITH GRANT OPTION;
+		mysql> GRANT ALL PRIVILEGES ON zend_db_name.* TO 'zend_db_user'@'%' WITH GRANT OPTION;
 	
 	
 	Above provided example of SQL sintax to create database and use and grant required permissions.
