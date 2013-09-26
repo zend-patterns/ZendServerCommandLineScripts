@@ -50,6 +50,8 @@ Zend Server user interface is driven by MySQL database and separate instance of 
    
    		./zs-setupjoin.sh
 
+	*Steps 3-5 will have to be performed on all the nodes. We suggest setting up 	private and public keys in advance and runnign the commands over ssh. See sshexample.sh
+
 6. Extras
 
 	- Enable session clustering from command line.
