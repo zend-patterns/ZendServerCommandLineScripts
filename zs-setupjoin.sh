@@ -26,7 +26,7 @@ rm -rf *
 
 /usr/local/zend/bin/zs-manage bootstrap-single-server -p "$zendadmin_ui_pass" -o "$zend_order_number" -l "$zend_license_key" -r TRUE -a TRUE -e "$zend_admin_email" -d "$zenddev_ui_pass" || true
 web_api_key=`sqlite3 /usr/local/zend/var/db/gui.db "select HASH from GUI_WEBAPI_KEYS where NAME='admin';"`
-/usr/local/zend/bin/zs-manage server-add-to-cluster -n "$zend_self_name" -i "$zend_self_addr" -o "$zend_db_host" -u "$zend_db_user" -p "$zend_db_password" -d "$zend_db_name" -K $web_api_key -N "admin"
+/usr/local/zend/bin/zs-manage server-add-to-cluster -n "$zend_self_name" -i "$zend_self_addr" -o "$zend_db_host" -u "$zend_db_user" -p "$zend_db_password" -d "$zend_db_name" -K "$web_api_key" -N "admin"
 
 
 ## Restart Zend Server to check components status. 
