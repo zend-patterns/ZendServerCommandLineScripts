@@ -15,7 +15,7 @@ Zend Server user interface is driven by MySQL database and separate instance of 
 
 1. Installing and configuring MySQL. 
 
-		git clone git://github.com/zendtech/ZendServerCommandLineScripts.git ----recursive
+		git clone git://github.com/zend-patterns/ZendServerCommandLineScripts.git ----recursive
 		./mysql-install.sh 
 	
 	The goal of this step is to install and configure MySQL database backend to be used by **Zend Server Cluster Nodes**. Best practices would be to creat separate user with permissions on an empty database. "Registration" of the Zend Server node to the database will populate it with required structure. For small non-production environment location of the MySQL is no critical and can reside on one of the cluster nodes.  
@@ -40,7 +40,7 @@ Zend Server user interface is driven by MySQL database and separate instance of 
 	
 		yum -y install git
 	
-		git clone git://github.com/zendtech/ZendServerCommandLineScripts.git ----recursive
+		git clone git://github.com/zend-patterns/ZendServerCommandLineScripts.git ----recursive
 4. Changing Zend Server variables according to current licenses and passwords
    
    		nano -w globals.sh
